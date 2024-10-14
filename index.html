@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showLogin() {
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("signupForm").style.display = "none";
+        }
+
+        function showSignup() {
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("signupForm").style.display = "block";
+        }
+
+        function refreshLoginPage() {
+            alert("Logging in...");
+            location.reload();
+        }
+
+        function refreshSignupPage() {
+            alert("Signup successful!");
+            location.reload();
+        }
+    </script>
+</head>
+
+<body class="bg-cover bg-center flex items-center justify-center" style="background-image: url('desktop---1.png'); min-height: 100vh;">
+    <div class="bg-white p-10 rounded-lg shadow-lg w-[400px]">
+        <!-- Toggle Links -->
+        <div class="flex justify-center mb-6">
+            <button onclick="showLogin()" class="text-[#3751fe] mx-2">Login</button>
+            <span>|</span>
+            <button onclick="showSignup()" class="text-[#3751fe] mx-2">Signup</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h1 class="text-5xl text-center font-bold text-[#3751fe] mb-4">Login</h1>
+            <p class="text-2xl text-center text-[#3751fe] mb-8">Trial login and signup page</p>
+            <div class="relative mb-6">
+                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#3751fe]" placeholder="Username" />
+                <span class="absolute right-3 top-2.5">
+                    <img src="972105c5a775f38cf33d3924aea053f1-removebg-preview.png" alt="User Icon" class="w-6 h-6">
+                </span>
+            </div>
+            <div class="relative mb-4">
+                <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#3751fe]" placeholder="Password" />
+                <span class="absolute right-3 top-2.5">
+                    <img src="password_icon-removebg-preview.png" alt="Password Icon" class="w-6 h-6">
+                </span>
+            </div>
+            <div class="flex justify-between text-sm text-gray-500 mb-6">
+                <label>
+                    <input type="checkbox" class="mr-2"> Remember Me
+                </label>
+                <a href="#" class="text-[#3751fe]">Forgot Password?</a>
+            </div>
+            <div class="flex justify-center space-x-4 mb-6">
+                <button class="bg-[#3751fe] text-white py-2 px-8 rounded-full" onclick="refreshLoginPage()">Login</button>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" style="display: none;">
+            <h1 class="text-5xl text-center font-bold text-[#3751fe] mb-4">Signup</h1>
+            <p class="text-lg text-center text-black mb-8">You don't have an account? Please Signup</p>
+            <div class="relative mb-4">
+                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#3751fe]" placeholder="Username" />
+                <span class="absolute right-3 top-2.5">
+                    <img src="972105c5a775f38cf33d3924aea053f1-removebg-preview.png" alt="User Icon" class="w-6 h-6">
+                </span>
+            </div>
+            <div class="relative mb-4">
+                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#3751fe]" placeholder="Email" />
+                <span class="absolute right-3 top-2.5">
+                    <img src="email.png" alt="Email Icon" class="w-6 h-6">
+                </span>
+            </div>
+            <div class="relative mb-6">
+                <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#3751fe]" placeholder="Password" />
+                <span class="absolute right-3 top-2.5">
+                    <img src="password_icon-removebg-preview.png" alt="Password Icon" class="w-6 h-6">
+                </span>
+            </div>
+            <div class="flex justify-center space-x-4 mb-4">
+                <button class="bg-[#3751fe] text-white py-2 px-8 rounded-full" onclick="refreshSignupPage()">Signup</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
